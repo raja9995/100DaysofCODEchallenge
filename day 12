@@ -1,0 +1,116 @@
+                                                  // PRACTICING STRING PROBLEMS:-
+//EX:1
+class string2
+{
+	public static void main(String[]args)
+	{
+		String str="raja@123";
+		int n=str.length();
+		int countAlpha=0;
+		int countDigit=0;
+		int countSymbol=0;
+		
+		for (int i=0;i<n ;i++)
+		{
+			char ch=str.charAt(i);
+			if (ch>=65&&ch<=90||ch>=97&&ch<=122)
+			{
+				countAlpha++;
+			}
+			if (ch>=48&&ch<=57)
+			{
+				countDigit++;
+			}
+			else if (!(ch>=48&&ch<=57||ch>=65&&ch<=90||ch>=97&&ch<=122))
+			
+			{
+               countSymbol++;
+			}
+		}
+		System.out.println("count of Alphabates "+countAlpha);
+		System.out.println("count of digits "+countDigit);
+		System.out.println("count of symbol "+countSymbol);
+    
+ //EX:2
+     String s="hello good morning";
+	  int n=s.length();
+	  int count=1;
+	  char ch='';
+	  for (int i=0;i<n ; i++)
+	  { 
+		  char ch1=s.charAt(i);
+           if (ch==ch1)
+           {
+		      count++;
+           }
+		   
+		  
+	  }
+	  System.out.println(count);
+    
+    //EX:3
+    
+    String str="Abc@123";
+	   int num=str.length();
+	   int countAlpha=0;
+	   int countUpper=0;
+	   int countLower=0;
+	   int countDigit=0;
+	   int countSymbol=0;
+	   int countVowel=0;
+	   int countConsonant=0;
+
+	   for (int i=0;i<num;i++)
+	   {
+		   char ch=str.charAt(i);
+		   if (ch>=65&&ch<=90||ch>97&&ch<=122)
+		   {
+			   countAlpha++;
+               if (ch>=65&&ch<=90)
+               {
+				   countUpper++;
+               }
+			   else
+			   {
+                  countLower++;
+			   }
+		   }
+		   else if (ch>=48&&ch<=57)
+		    {
+			   countDigit++;
+		    }
+		   else 
+		   {
+			   countSymbol++;
+		   }
+
+		   
+            
+		   
+			   if (ch>=65&&ch<=90||ch>97&&ch<=122)
+
+			     if (ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U'||ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+		           {
+			         countVowel++;
+		           }
+		        else
+		           {
+		       	   countConsonant++;
+		           }
+		   
+		   
+		   
+	   }
+	   System.out.println("count of Alphabates:"+countAlpha);
+	   System.out.println("count of Uppercase:"+countUpper);
+	   System.out.println("count of LOWERCASE:"+countLower);
+	   System.out.println("count of DIGITS:"+countDigit);
+	   System.out.println("count of SYMBOLS:"+countSymbol);
+	   System.out.println("count of VOWELS:"+countVowel);
+	   System.out.println("count of CONSONANTS:"+countConsonant);
+	   
+    
+
+		
+    }
+}
