@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution
+{
+  public static String getSmallestAndLargest(String s, int k) {
+        String smallest = "";
+        String largest = "";
+        int count=0;
+        for(int i=0;i<s.length();i++){
+            for(int j=i+1;j<=s.length();j++){
+              if(s.substring(i,j).length()==k){
+                count++;
+              }
+            }
+        }
+        String s1[]=new String[count];
+        for(int i=0;i<s.length();i++){
+            for(int j=i+1;j<=s.length();j++){
+              if(s.substring(i,j).length()==k){
+                count++;
+            s1[i]=(s.substring(i,j));
+              }
+            }
+        }
+        for(int i=0;i<s1.length-1;i++){
+            for(int j=i+1;j<s1.length;j++){
+                if(s1[i].compareTo(s1[j])>0){
+                    String temp=s1[j];
+                    s1[j]=s1[i];
+                    s1[i]=temp;
+                }
+            }
+        }
+        
+        smallest=s1[0];
+        largest=s1[s1.length-1];       
+        return smallest + "\n" + largest;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.next();
+        int k = scan.nextInt();
+        scan.close();
+      
+        System.out.println(getSmallestAndLargest(s, k));
+    }
+}
+    
