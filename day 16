@@ -1,0 +1,96 @@
+package codeChallenge_100Days;
+
+public class Day_16 {
+ //EX:1 
+
+	public static void m1()
+	{
+		System.out.println("Hello");
+	}
+	public static void m2()
+	{
+		System.out.println("Raja");
+	}
+	public void a1()
+	{
+		System.out.println("How");
+	}
+	public void a2()
+	{
+		System.out.println("are you");
+	}
+	  
+ //EX:2 METHOD CALLING METHOD
+	public static void m3()
+	{
+		System.out.println("this is m3 method");
+	
+	}
+	public static void m4()
+	{
+		System.out.println("this is m4 method");
+		m3();
+	}
+	public static void m5()
+	{
+		System.out.println("this is m5 method");
+		m4();
+		
+	}
+
+//EX:3 GIVEN NUMBER IS EVEN OR ODD
+     public void evenorodd(int num)
+     {
+    	 if (num%2==0)
+    	 {
+    		 System.out.println("Even");
+    	 }
+    	 else
+    	 {
+    		 System.out.println("Odd");
+    	 }
+     }
+     //EX:4 GIVEN NUMBER IS PRIME OR NOT
+     public void primerorNot(int num)
+     {
+    	 int c=0;
+    	 for (int i=1;i<=num;i++)
+    	 {
+    		 if (num%i==0)
+    		 {
+    			 c++;
+    		 }
+    	 }
+    	 if (c==2)
+    	 {
+    		 System.out.println(num+" PrimeNumber");
+    	 }
+    	 else
+    	 {
+    		 System.out.println(num+" Not a PrimeNumber");
+    	 }
+     }
+//MAIN METHOD
+     public static void main(String[] args) {
+ 		m1();//Ex:1 METHOD CALLING
+ 		m2();//Ex:1 METHOD CALLING
+ 		Day_16 rv=new Day_16();//Ex:1 METHOD CALLING
+ 		rv.a1();//Ex:1 METHOD CALLING
+ 		rv.a2();//Ex:1 METHOD CALLING
+ 		
+ 		m5();  //Ex:2 METHOD CALLING
+ 		
+ 		Day_16 rv1=new Day_16();//Ex:3 METHOD CALLING
+ 		rv1.evenorodd(12);//Ex:3 METHOD CALLING
+ 		rv1.evenorodd(13);//Ex:3 METHOD CALLING
+ 		rv1.evenorodd(30);//Ex:3 METHOD CALLING
+ 		
+ 		Day_16 rv2=new Day_16();//Ex:4 METHOD CALLING
+ 		rv2.primerorNot(2);//Ex:4 METHOD CALLING
+ 		rv2.primerorNot(4);//Ex:4 METHOD CALLING
+ 		rv2.primerorNot(17);//Ex:4 METHOD CALLING
+ 		rv2.primerorNot(10);//Ex:4 METHOD CALLING
+ 		}	
+}
+
+    
